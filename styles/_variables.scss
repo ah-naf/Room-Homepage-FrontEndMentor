@@ -1,0 +1,57 @@
+// Primary Colors
+$dark-Gray: hsl(0, 0%, 63%);
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+$very-dark-gray: hsl(0, 0%, 27%);
+// Font Family
+$spartan: 'Spartan',
+sans-serif;
+// Reset
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    position: relative;
+}
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin width1165 {
+    @media screen and (max-width: 1165px) {
+        @content;
+    }
+}
+
+@mixin width900 {
+    @media screen and (max-width: 900px) {
+        @content;
+    }
+}
+
+@mixin width800 {
+    @media screen and (max-width: 800px) {
+        @content;
+    }
+}
+
+@mixin width500 {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+button,
+a {
+    cursor: pointer;
+}

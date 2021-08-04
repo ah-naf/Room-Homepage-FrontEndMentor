@@ -1,0 +1,203 @@
+header {
+    min-height: 40rem;
+    position: relative;
+    @include width1165 {
+        min-height: 35rem;
+    }
+    @include width800 {
+        min-height: auto;
+    }
+}
+
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-color: rgba(0, 0, 0, 0.5);
+    right: 100%;
+    transition: all .3s;
+}
+
+.header-content {
+    min-height: 40rem;
+    width: 100%;
+    position: relative;
+    .navigation-bar {
+        position: absolute;
+        width: 100%;
+    }
+    @include width1165 {
+        min-height: 35rem;
+    }
+    @include width800 {
+        min-height: auto;
+    }
+}
+
+.header-row {
+    min-height: 40rem;
+    width: 100%;
+    position: relative;
+    @include flex(row, unset, unset);
+    z-index: 0;
+    .col-1 {
+        flex-basis: 65%;
+        position: relative;
+        background-image: url('../images/desktop-image-hero-1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 25%;
+        transition: all 0.5s;
+        @include width1165 {
+            flex-basis: 55%;
+            background-image: url('../images/mobile-image-hero-1.jpg');
+            background-position: bottom;
+        }
+        @include width800 {
+            min-height: 40rem;
+        }
+        @include width500 {
+            min-height: 30rem;
+        }
+    }
+    .col-2 {
+        flex-basis: 45%;
+        @include flex(column,
+        center,
+        center);
+        @include width1165 {
+            flex-basis: 45%;
+        }
+        @include width800 {
+            max-height: 30rem;
+            min-height: 30rem;
+        }
+    }
+    @include width1165 {
+        min-height: 35rem;
+    }
+    @include width800 {
+        flex-direction: column;
+        min-height: auto;
+    }
+}
+
+.header-col {
+    min-height: 40rem;
+    @include flex(row,
+    center,
+    center);
+    @include width1165 {
+        min-height: 35rem;
+    }
+    @include width800 {
+        min-height: auto;
+    }
+}
+
+.angle {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 100%;
+    width: 20%;
+    height: 15%;
+    max-width: 10rem;
+    max-height: 6.5rem;
+    background-color: black;
+    button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0 21%;
+        transition: all .3s;
+        overflow: hidden;
+        &:hover {
+            background-color: gray;
+            opacity: 0.7;
+        }
+    }
+    @include width800 {
+        left: auto;
+        right: 0;
+    }
+    @include width500 {
+        width: 8rem;
+        height: 5rem;
+    }
+}
+
+.content-text {
+    font-family: $spartan;
+    max-width: 30rem;
+    margin: 6rem 2rem 6rem 3rem;
+    @include width1165 {
+        margin: 3rem 2rem 3rem 3rem;
+        max-width: 25rem;
+    }
+    @include width900 {
+        margin-top: 0;
+    }
+    @include width800 {
+        margin: 5rem 3rem 3rem;
+        max-width: 35rem;
+    }
+    h1 {
+        font-size: 2.3rem;
+        margin-bottom: 3rem;
+        @include width1165 {
+            font-size: 2rem;
+        }
+        @include width900 {
+            font-size: 1.5rem;
+        }
+        @include width800 {
+            font-size: 2rem;
+        }
+        @include width500 {
+            font-size: 1.5rem;
+        }
+    }
+    p {
+        line-height: 1.7rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+        font-size: 0.9rem;
+        @include width1165 {
+            line-height: 1.5rem;
+        }
+        @include width800 {
+            font-size: 1rem;
+            line-height: 1.8rem;
+        }
+        @include width500 {
+            font-size: 0.9rem;
+        }
+    }
+    button {
+        display: block;
+        font-family: $spartan;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-weight: 600;
+        &:hover {
+            color: grey;
+            opacity: 0.8;
+        }
+        span {
+            display: inline-block;
+            letter-spacing: 0.8rem;
+            img {
+                padding-left: 1rem;
+                @include width500 {
+                    padding: 0;
+                }
+            }
+            @include width500 {
+                letter-spacing: 0.5rem;
+            }
+        }
+    }
+}

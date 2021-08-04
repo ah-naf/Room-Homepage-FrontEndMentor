@@ -1,0 +1,97 @@
+footer {
+    @include width800 {
+        margin-top: 3rem;
+    }
+    @include width500 {
+        margin-top: 3rem;
+    }
+}
+
+.footer-row {
+    display: flex;
+    @include width900 {
+        flex-direction: column;
+    }
+    .footer-col1,
+    .footer-col3 {
+        min-height: 30rem;
+        flex-basis: 33%;
+        @include width800 {
+            min-height: 25rem;
+        }
+        @include width500 {
+            min-height: 20rem;
+        }
+    }
+    .footer-col2 {
+        flex: 48%;
+        display: flex;
+        align-items: center;
+        padding: 4rem 2rem 2rem;
+        @include width900 {
+            padding: 3rem 3rem;
+        }
+    }
+}
+
+.footer-col2 {
+    font-family: $spartan;
+    @include width900 {
+        min-height: 25rem;
+        margin: auto;
+        display: flex;
+    }
+    .footer-content {
+        max-width: 25rem;
+        margin: auto;
+        h2 {
+            margin-bottom: 1.3rem;
+            font-size: 1.3rem;
+        }
+        p {
+            font-weight: 300;
+            font-size: 0.8rem;
+            line-height: 1.4rem;
+        }
+        @include width900 {
+            text-align: center;
+            max-width: 30rem;
+            h2 {
+                font-size: 1.8rem;
+            }
+            p {
+                font-size: 1rem;
+                line-height: 1.6rem;
+            }
+        }
+        @include width800 {
+            h2 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 0.9rem;
+                line-height: 1.5rem;
+            }
+        }
+        @include width500 {
+            text-align: left;
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+.footer-col1 {
+    background-image: url('../images/image-about-dark.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer-col3 {
+    background-image: url('../images/image-about-light.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,21 @@
+.navbar-show {
+    right: 0;
+    z-index: 2;
+    position: fixed;
+}
+
+.hamburger-fixed {
+    left: 0rem;
+    top: 3rem;
+    position: fixed;
+    transform: translateY(-17%) translateX(85%);
+}
+
+.bg-show {
+    right: 0;
+    z-index: 1;
+}
+
+.body-change {
+    z-index: -1;
+}
