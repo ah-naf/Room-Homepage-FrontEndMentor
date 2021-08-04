@@ -22,6 +22,9 @@ footer {
         @include width500 {
             min-height: 20rem;
         }
+        @include width1800 {
+            flex-basis: 44%;
+        }
     }
     .footer-col2 {
         flex: 48%;
@@ -77,6 +80,16 @@ footer {
             text-align: left;
             h2 {
                 font-size: 1.3rem;
+            }
+        }
+        @include width1800 {
+            max-width: 30rem;
+            h2 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 1rem;
+                line-height: 1.7rem;
             }
         }
     }

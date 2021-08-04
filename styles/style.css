@@ -10,6 +10,8 @@
 
 body {
   position: relative;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 button,
@@ -190,6 +192,7 @@ header {
   z-index: -2;
   background-color: rgba(0, 0, 0, 0.5);
   right: 100%;
+  opacity: 0;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -299,6 +302,12 @@ header {
   .header-row .col-2 {
     max-height: 30rem;
     min-height: 30rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .header-row {
+    min-height: 42rem;
   }
 }
 
@@ -523,6 +532,7 @@ header {
 .bg-show {
   right: 0;
   z-index: 1;
+  opacity: 1;
 }
 
 .body-change {
@@ -574,6 +584,14 @@ header {
   .footer-row .footer-col1,
   .footer-row .footer-col3 {
     min-height: 20rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .footer-row .footer-col1,
+  .footer-row .footer-col3 {
+    -ms-flex-preferred-size: 44%;
+        flex-basis: 44%;
   }
 }
 
@@ -656,6 +674,19 @@ header {
   }
   .footer-col2 .footer-content h2 {
     font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .footer-col2 .footer-content {
+    max-width: 30rem;
+  }
+  .footer-col2 .footer-content h2 {
+    font-size: 1.5rem;
+  }
+  .footer-col2 .footer-content p {
+    font-size: 1rem;
+    line-height: 1.7rem;
   }
 }
 

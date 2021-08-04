@@ -16,6 +16,7 @@ header {
     z-index: -2;
     background-color: rgba(0, 0, 0, 0.5);
     right: 100%;
+    opacity: 0;
     transition: all .3s;
 }
 
@@ -73,6 +74,9 @@ header {
             max-height: 30rem;
             min-height: 30rem;
         }
+    }
+    @include width1800 {
+        min-height: 42rem;
     }
     @include width1165 {
         min-height: 35rem;

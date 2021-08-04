@@ -18,6 +18,8 @@ sans-serif;
 
 body {
     position: relative;
+    max-width: 120rem;
+    margin: 0 auto;
 }
 
 @mixin flex($direction, $justify, $align) {
@@ -25,6 +27,12 @@ body {
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
+}
+
+@mixin width1800 {
+    @media screen and (min-width: 1800px) {
+        @content;
+    }
 }
 
 @mixin width1165 {
